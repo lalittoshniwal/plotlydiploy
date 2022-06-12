@@ -71,7 +71,7 @@ function buildCharts(sample) {
       orientation: 'h'
     }];
 
-    var layout = {title:{text: "<b>Top Ten Bacteria Culture Found</b>", font:{size:20}}, margin: { t: 40, b: 100 }}
+    var layout = {plot_bgcolor:"black", paper_bgcolor:"black", title:{text: "<b>Top Ten Bacteria Culture Found</b>", font:{color:"grey", size:16}}, margin: {t: 40, b: 100 }}
     
     Plotly.newPlot('bar', bar_data, layout);
 
@@ -88,7 +88,7 @@ function buildCharts(sample) {
     }];
 
   // 2. Create the layout for the bubble chart.
-    var bubbleLayout = {title:{text: '<b>Bacteria Culture per Sample</b>', font:{size:20}}, xaxis:{title: "OTU ID"}, margin: { t: 100, b: 100 }};
+    var bubbleLayout = {plot_bgcolor:"black", paper_bgcolor:"black", title:{text: '<b>Bacteria Culture per Sample</b>', font:{color:"grey", size:16}}, xaxis:{title: "OTU ID"}, margin: { t: 100, b: 50 }};
 
   // 3. Use Plotly to plot the data with the layout.
     Plotly.newPlot('bubble', bubbleData, bubbleLayout); 
@@ -109,7 +109,7 @@ function buildCharts(sample) {
     var gaugeData = [{
 		domain: { x: [0, 1], y: [0, 1] },
 		value: washFreq,
-		title: { text: "<b>Belly Button Washing Frequency</b> <br> Scrubs per Week", font:{size:20}},
+		title: { text: "<b>Belly Button Washing Frequency</b> <br> Scrubs per Week", font:{color:"grey", size:16}},
 		type: "indicator",
 		mode: "gauge+number",
     gauge: {
@@ -126,7 +126,7 @@ function buildCharts(sample) {
 	  }];
     
   // 5. Create the layout for the gauge chart.
-    var gaugeLayout = {width: 500, height: 400, margin: { t: 0, b: 0 }   
+    var gaugeLayout = {plot_bgcolor:"black", paper_bgcolor:"black", margin: { t: 30, b: 10 }   
     };
 
     // 6. Use Plotly to plot the gauge data and layout.
